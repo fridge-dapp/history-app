@@ -1,0 +1,54 @@
+{
+  "idToSet": "5",
+  "date": "2024-01-09T00:00:00+01:00",
+  "internal_temperature": {
+    "min_threshold": -5.0,
+    "max_threshold": 10.0,
+    "times_min_threshold_exceeded": 0,
+    "total_times_min_threshold_exceeded": 0,
+    "max_times_min_threshold_exceeded": 0,
+    "times_max_threshold_exceeded": 0,
+    "total_times_max_threshold_exceeded": 27734,
+    "max_times_max_threshold_exceeded": 26315,
+    "average_temperature": 26.053999999999996,
+    "median_temperature": 26.87,
+    "max_temperature": 27.57,
+    "min_temperature": 23.58
+  },
+  "external_temperature": {
+    "min_threshold": 10.0,
+    "max_threshold": 40.0,
+    "times_min_threshold_exceeded": 0,
+    "total_times_min_threshold_exceeded": 0,
+    "max_times_min_threshold_exceeded": 0,
+    "times_max_threshold_exceeded": 0,
+    "total_times_max_threshold_exceeded": 0,
+    "max_times_max_threshold_exceeded": 0,
+    "average_temperature": 24.80333333333333,
+    "median_temperature": 25.13,
+    "max_temperature": 25.72,
+    "min_temperature": 23.56
+  },
+  "energy_consumption": {
+    "max_threshold": 1.0,
+    "times_max_threshold_exceeded": 0,
+    "total_times_max_threshold_exceeded": 0,
+    "max_times_max_threshold_exceeded": 0,
+    "average_consumption": 0.0,
+    "median_consumption": 0.0,
+    "max_consumption": 0.0,
+    "min_consumption": 0.0
+  },
+  "water_leak": {
+    "times_alarm": 2,
+    "total_times_alarm": 17,
+    "min_times_alarm": 8,
+    "max_times_alarm": 9
+  },
+  "door": {
+    "times_door_open": 6,
+    "total_times_door_open": 333,
+    "min_times_door_open": 5,
+    "max_times_door_open": 152
+  }
+}

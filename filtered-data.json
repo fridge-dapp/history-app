@@ -1,0 +1,84 @@
+{
+  "datos_criticos": [
+    {
+      "fecha": "2023-12-18T12:30:00",
+      "temperatura_interior": {
+        "umbral_superado": true,
+        "duracion_umbral_superado": "00:15:59",
+        "media": 25.5,
+        "mediana": 25.7,
+        "maxima": 26.3,
+        "minima": 24.8
+      },
+      "temperatura_exterior": {
+        "umbral_superado": false
+      },
+      "consumo_electricidad": {
+        "umbral_superado": true,
+        "duracion_umbral_superado": "00:12:46",
+        "media": 150,
+        "mediana": 145,
+        "maxima": 160,
+        "minima": 140
+      },
+      "fuga_agua": {
+        "activada": true,
+        "duracion_fuga": "00:25:03"
+      },
+      "puerta": {
+        "abierta": true,
+        "duracion_abierta": "00:12:45"
+      },
+      "puerta_abierta_veces": {
+        "numero_veces_puerta_abierta": 6
+      }
+    },
+    {
+      "fecha": "2023-12-18T15:45:00",
+      "temperatura_interior": {
+        "umbral_superado": false
+      },
+      "temperatura_exterior": {
+        "umbral_superado": true,
+        "duracion_umbral_superado": "00:23:16",
+        "media": 10,
+        "mediana": 9.5,
+        "maxima": 12,
+        "minima": 8
+      },
+      "consumo_electricidad": {
+        "umbral_superado": false
+      },
+      "fuga_agua": {
+        "activada": false
+      },
+      "puerta": {
+        "abierta": false
+      },
+      "puerta_abierta_veces": {
+        "numero_veces_puerta_abierta": 9
+      }
+    },
+    {
+      "fecha": "2023-12-18T23:59:59",
+      "temperatura_interior": {
+        "umbral_superado": false
+      },
+      "temperatura_exterior": {
+        "umbral_superado": false
+      },
+      "consumo_electricidad": {
+        "umbral_superado": false
+      },
+      "fuga_agua": {
+        "activada": false
+      },
+      "puerta": {
+        "abierta": false
+      },
+      "puerta_abierta_veces": {
+        "numero_veces_puerta_abierta": 16
+      }
+    }
+  ]
+}

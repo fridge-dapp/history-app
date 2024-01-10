@@ -1,13 +1,13 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import FridgeIPFS from "./artifacts/contracts/Fridge.sol/Fridge.json";
+import FridgeIPFS from "./artifacts/contracts/FridgeSensorsIPFSOwner.sol/FridgeIPFSOwner.json";
 import {
   encryptDataField,
   decryptNodeResponse,
 } from "@swisstronik/swisstronik.js";
 
-const myContractAddress = "0xd03a62F1A0Fff7E1d14d8c147129F0f605661b80";
+const myContractAddress = "0x92059238078caD43e18299BdcE944029D7A03A32";
 
 const allowed_wallets = [
   "0x50E06E0c40E8fD3BA29B3cc515E693101f96FfB4",
@@ -16,7 +16,7 @@ const allowed_wallets = [
 ];
 
 const sendShieldedQuery = async (provider, destination, data) => {
-  const rpclink = "https://json-rpc.testnet.swisstronik.com/";
+  const rpclink = "https://json-rpc.testnet.swisstronik.com/"; //URL of the RPC node for Swisstronik.
   const [encryptedData, usedEncryptedKey] = await encryptDataField(
     rpclink,
     data
@@ -77,37 +77,22 @@ function App() {
 
       const data = decodedResponse[0].map((item) => {
         const timestamp = Number(item.timestamp);
-        const date = new Date(timestamp * 1000);
+        const date = new Date(timestamp * 1000); // Convert the timestamp to milliseconds
 
         const day = date.getDate();
-        const month = date.getMonth() + 1;
+        const month = date.getMonth() + 1; // Months are 0-based in JavaScript
         const year = date.getFullYear();
 
         const formattedDate = `${day}/${month}/${year}`;
 
-        /*
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-
-        const hoursFormatted = hours.toString().padStart(2, "0");
-        const minutesFormatted = minutes.toString().padStart(2, "0");
-
-        const formattedTime = `${hoursFormatted}:${minutesFormatted}`;
-        */
-
         return {
           date: formattedDate,
-          //time: formattedTime,
           ipfsHash: item.ipfsHash,
-          txHash: item.txHash,
         };
       });
 
-      const filteredData = data.filter(
-        (item) => item.txHash !== "Filler hash for the first transaction"
-      );
-
-      const groupedData = filteredData.reduce((groups, item) => {
+      // Group the data by date
+      const groupedData = data.reduce((groups, item) => {
         const date = item.date;
         if (!groups[date]) {
           groups[date] = [];
@@ -153,7 +138,7 @@ function App() {
         </div>
 
         <button onClick={() => fetchFridgeData()} className="button">
-          Fetch the Fridge's History
+          Fetch the Fridge's Sensors History
         </button>
         {buttonClicked && Object.keys(fridgeData).length === 0 ? (
           <p className="message">This fridge has no data submitted yet.</p>
@@ -164,18 +149,12 @@ function App() {
               <div className="container">
                 {data.map((item, index) => (
                   <div key={index} className="item-container">
-                    <div className="Categories">
+                    <div className="ipfsHash">
                       <p>
-                        {item.ipfsHash.startsWith("https") ? (
-                          <b>ipfsHash</b>
-                        ) : (
-                          <b>Technical Support Summary</b>
-                        )}
+                        {item.ipfsHash.startsWith("https")
+                          ? "ipfsHash"
+                          : "Technical Support Summary"}
                         : {item.ipfsHash}
-                      </p>
-                      <p>
-                        <b>Tx Hash: </b>
-                        {item.txHash}
                       </p>
                     </div>
                   </div>

@@ -18,15 +18,23 @@ const sendShieldedQuery = async (provider, destination, data) => {
 };
 
 async function main() {
-  const contractAddress = "0x035c35f4cC4806Cc3FEbB16c0843eFfF761BbdC7";
+  const contractAddress = "0x92059238078caD43e18299BdcE944029D7A03A32";
   const [signer] = await hre.ethers.getSigners();
-  const contractFactory = await hre.ethers.getContractFactory("FridgeIPFS");
+  const contractFactory = await hre.ethers.getContractFactory(
+    "FridgeIPFSOwner"
+  );
   const contract = contractFactory.attach(contractAddress);
-  const functionName = "getAllData";
-  const idToSet = "91";
+  const functionName = "getAllDataByMultipleUploaders";
+  const idToSet = "25";
+  const allowed_wallets = [
+    "0x50E06E0c40E8fD3BA29B3cc515E693101f96FfB4",
+    "0x28511486999394a04856506737bFa9AA15d90c53",
+    "0x0c1889D0173642D88705546241987F5CCc4d9F56",
+  ];
 
   // Encode the function call
   const functionCallData = contract.interface.encodeFunctionData(functionName, [
+    allowed_wallets, // New argument: the array of uploaders' addresses
     idToSet,
   ]);
 
@@ -42,6 +50,8 @@ async function main() {
     functionName,
     responseMessage
   );
+  console.log("DECODED RESPONSE: ", decodedResponse);
+  console.log("DECODED RESPONSE 2: ", decodedResponse[0]);
 
   // Iterate through the array of SensorData
   for (const data of decodedResponse[0]) {
