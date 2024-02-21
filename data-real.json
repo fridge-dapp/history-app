@@ -1,55 +1,55 @@
 {
-  "idToSet": "FridgeS01",
-  "date": "2024-01-09T00:00:00+01:00",
+  "idToSet": "FridgeJ01",
+  "date": "2024-02-14T00:00:00+01:00",
   "internal_temperature": {
     "min_threshold": -5.0,
     "max_threshold": 10.0,
-    "times_min_threshold_exceeded": 0,
-    "total_time_min_threshold_exceeded": 0,
-    "max_time_min_threshold_exceeded": 0,
-    "times_max_threshold_exceeded": 0,
-    "total_time_max_threshold_exceeded": 27734,
-    "max_time_max_threshold_exceeded": 26315,
-    "average_temperature": 26.053999999999996,
-    "median_temperature": 26.87,
-    "max_temperature": 27.57,
-    "min_temperature": 23.58
+    "times_min_threshold_exceeded": 0.0,
+    "total_time_min_threshold_exceeded": 0.0,
+    "max_time_min_threshold_exceeded": 0.0,
+    "times_max_threshold_exceeded": 0.0,
+    "total_time_max_threshold_exceeded": 0.0,
+    "max_time_max_threshold_exceeded": 0.0,
+    "average_temperature": 2.6,
+    "median_temperature": 3.1,
+    "max_temperature": 8.2,
+    "min_temperature": -2.9
   },
   "external_temperature": {
     "min_threshold": 10.0,
     "max_threshold": 40.0,
-    "times_min_threshold_exceeded": 0,
-    "total_time_min_threshold_exceeded": 0,
-    "max_time_min_threshold_exceeded": 0,
-    "times_max_threshold_exceeded": 0,
-    "total_time_max_threshold_exceeded": 0,
-    "max_time_max_threshold_exceeded": 0,
-    "average_temperature": 24.80333333333333,
-    "median_temperature": 25.13,
-    "max_temperature": 25.72,
-    "min_temperature": 23.56
+    "times_min_threshold_exceeded": 0.0,
+    "total_time_min_threshold_exceeded": 0.0,
+    "max_time_min_threshold_exceeded": 0.0,
+    "times_max_threshold_exceeded": 0.0,
+    "total_time_max_threshold_exceeded": 0.0,
+    "max_time_max_threshold_exceeded": 0.0,
+    "average_temperature": 27.8,
+    "median_temperature": 28.3,
+    "max_temperature": 32.7,
+    "min_temperature": 21.5
   },
   "energy_consumption": {
     "max_threshold": 1.0,
-    "times_max_threshold_exceeded": 0,
-    "total_time_max_threshold_exceeded": 0,
-    "max_time_max_threshold_exceeded": 0,
-    "average_consumption": 0.0,
-    "median_consumption": 0.0,
-    "max_consumption": 0.0,
-    "min_consumption": 0.0
+    "times_max_threshold_exceeded": 0.0,
+    "total_time_max_threshold_exceeded": 0.0,
+    "max_time_max_threshold_exceeded": 0.0,
+    "average_consumption": 0.01,
+    "median_consumption": 0.009,
+    "max_consumption": 0.012,
+    "min_consumption": 0.004
   },
   "water_leak": {
     "times_alarm": 2,
-    "total_time_alarm": 17,
-    "min_time_alarm": 8,
-    "max_time_alarm": 9
+    "total_time_alarm": 58,
+    "min_time_alarm": 42,
+    "max_time_alarm": 16
   },
   "door": {
     "times_door_open": 6,
     "times_alarm": 2,
-    "total_time_door_open": 333,
-    "min_time_door_open": 5,
-    "max_time_door_open": 152
+    "total_time_door_open": 76,
+    "min_time_door_open": 27,
+    "max_time_door_open": 49
   }
 }

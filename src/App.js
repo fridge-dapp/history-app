@@ -7,7 +7,7 @@ import {
   decryptNodeResponse,
 } from "@swisstronik/swisstronik.js";
 
-const myContractAddress = "0x2faaDe45fB012Aa255Ba90483D7911dCF0343B9B";
+const myContractAddress = "0x5eB8fc64E489fF63470814438bfbE3782309F484";
 
 const allowed_wallets = [
   "0x50E06E0c40E8fD3BA29B3cc515E693101f96FfB4",
