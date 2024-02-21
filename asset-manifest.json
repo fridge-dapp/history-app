@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/history-app/static/css/main.e2066264.css",
+    "main.js": "/history-app/static/js/main.a6f7ccae.js",
+    "static/js/787.898ee9eb.chunk.js": "/history-app/static/js/787.898ee9eb.chunk.js",
+    "index.html": "/history-app/index.html",
+    "main.e2066264.css.map": "/history-app/static/css/main.e2066264.css.map",
+    "main.a6f7ccae.js.map": "/history-app/static/js/main.a6f7ccae.js.map",
+    "787.898ee9eb.chunk.js.map": "/history-app/static/js/787.898ee9eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2066264.css",
+    "static/js/main.a6f7ccae.js"
+  ]
+}
